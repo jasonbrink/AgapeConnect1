@@ -15,7 +15,8 @@ Imports GCX
 Namespace DotNetNuke.Modules.AgapePortal
     Partial Class CasAuth
         Inherits Entities.Modules.PortalModuleBase
-        Dim CASHOST As String = "https://thekey.me/cas/"
+        'Dim CASHOST As String = "https://thekey.me/cas/"
+		Dim CASHOST As String = "https://cas.powertochange.org/"
         Dim Service As String = ""
       
 
@@ -88,7 +89,9 @@ Namespace DotNetNuke.Modules.AgapePortal
 
                 ' Response.Redirect("https://thekey.me/cas/login.htm?service=" & Service & "&template=https://www.agape.org.uk/sso/template2.css")
 
-                Response.Redirect("https://thekey.me/cas/login.htm?service=" & Service)
+                'Response.Redirect("https://thekey.me/cas/login.htm?service=" & Service)
+				Response.Redirect("https://cas.powertochange.org/login?service=" & Service)
+
 
 
             Else
